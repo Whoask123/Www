@@ -1,0 +1,77 @@
+local PabloLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/BatuKvi123/PabloLibV3/main/PabloLibV3"))()
+local window = PabloLib:Create(
+"Test hub", -- Name here.
+"Enabled", -- If you want draggable set here to "Enabled" if you dont want set to "Disabled".
+"p" -- You can put any keybind here to open close.
+)
+
+--Tabs--
+
+local tab1 = window:CreateTab("Slap Battle")
+
+--button--
+
+tab1:CreateButton("Slap battle script", function()
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Slap%20Battles")))()
+end)
+
+--button--
+
+tab1:CreateButton("Gaster Hub!!!", function()
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/Dusty1234567890/TestMain/main/SLAPBATTLESGUI5")))()
+end)
+
+--button--
+
+tab1:CreateButton("Infinite yield", function()
+defaultsettings = {
+	prefix = ';';
+	StayOpen = false;
+	keepIY = true;
+	logsEnabled = false;
+	jLogsEnabled = false;
+	aliases = {};
+	binds = {};
+	WayPoints = {};
+	PluginsTable = {};
+}
+
+defaults = game:GetService("HttpService"):JSONEncode(defaultsettings)
+
+writefile("IY_FE.iy",defaults)
+
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+--button--
+
+tab1:CreateButton("Get Lamp Need ZZZ", function()
+for i = 1,5 do game:GetService("ReplicatedStorage").nightmare:FireServer("LightBroken") end
+end)
+
+--button--
+
+tab1:CreateButton("Get FrostBite", function()
+if  game.PlaceId ~= 17290438723 then
+game:GetService("TeleportService"):Teleport(17290438723)
+elseif game.PlaceId == 17290438723 then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-558, 182, 54)
+local function fireAllProximityPrompts()
+    for _, descendant in ipairs(workspace:GetDescendants()) do
+        if descendant:IsA("ProximityPrompt") then
+            fireproximityprompt(descendant)
+        end
+    end
+end
+
+-- Trigger all ProximityPrompts
+fireAllProximityPrompts()
+end
+end)
+
+--button--
+
+tab1:CreateButton("Virus Svbee", function()
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/Donjosx/SlapBattle_Scripts/main/Sbeve_Abuser")))() 
+end)
